@@ -38,12 +38,12 @@ namespace RoninVelkoz.Modes
                 Q.Cast(qtarget);
             }
 
-            if (HarassMenu.GetCheckBoxValue("eUse") && E.IsReady() && etarget.IsValidTarget(SpellsManager.E.Range) && !etarget.CanMove)
+            if (wtarget != null && HarassMenu.GetCheckBoxValue("eUse") && E.IsReady() && etarget.IsValidTarget(SpellsManager.E.Range) && etarget.HasBuffOfType(BuffType.Slow))
             {
                 E.Cast(etarget);
             }
 
-            if (HarassMenu.GetCheckBoxValue("wUse") && W.IsReady() && wtarget.IsValidTarget(SpellsManager.W.Range) && !wtarget.CanMove)
+            if (wtarget != null && HarassMenu.GetCheckBoxValue("wUse") && W.IsReady() && wtarget.IsValidTarget(SpellsManager.W.Range) && wtarget.HasBuffOfType(BuffType.Knockback))
             {
                 W.Cast(wtarget);
             }

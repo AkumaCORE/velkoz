@@ -150,6 +150,7 @@ namespace RoninVelkoz
             MiscMenu.AddLabel("Gap Closer");
             MiscMenu.Add("Ugapc", new CheckBox("Gap Closer Mode"));
             MiscMenu.Add("Egapc", new CheckBox("Use E to gapclose"));
+            MiscMenu.Add("MCastQ", new KeyBind("CastQ Key", false, KeyBind.BindTypes.HoldActive, 'Z'));
             MiscMenu.AddGroupLabel("Auto Level UP");
             MiscMenu.CreateCheckBox("Activate Auto Leveler", "activateAutoLVL", false);
             MiscMenu.AddLabel("The auto leveler will always focus R than the rest of the spells");

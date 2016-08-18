@@ -46,7 +46,7 @@ namespace RoninVelkoz.Modes
                 }
             }
 
-            if (ComboMenu.GetCheckBoxValue("eUse") && E.IsReady() && etarget.IsValidTarget(SpellsManager.E.Range) && E.GetPrediction(qtarget).HitChance >= HitChance.High && E.GetPrediction(etarget).HitChance >= Hitch.hitchance(E, ComboMenu))
+            if (ComboMenu.GetCheckBoxValue("eUse") && E.IsReady() && etarget.IsValidTarget(SpellsManager.E.Range) && etarget.HasBuffOfType(BuffType.Slow))
             {
                 E.Cast(etarget);
             }

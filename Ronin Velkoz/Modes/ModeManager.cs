@@ -47,7 +47,8 @@ namespace RoninVelkoz.Modes
             
             if (MiscMenu["MCastQ"].Cast<KeyBind>().CurrentValue)
             {
-                Combo.Execute();
+                var minion = EntityManager.MinionsAndMonsters.GetLaneMinions(EntityManager.UnitTeam.Enemy,
+                Player.Instance.ServerPosition, 1100).ToArray();
             }
 
             if (orbMode.HasFlag(Orbwalker.ActiveModes.Harass) && playerMana > HarassMenu.GetSliderValue("manaSlider"))

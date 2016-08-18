@@ -51,7 +51,7 @@ namespace RoninVelkoz.Modes
                 E.Cast(etarget);
             }
 
-            if (ComboMenu.GetCheckBoxValue("wUse") && W.IsReady() && wtarget.IsValidTarget(SpellsManager.W.Range)  && !Program.Champion.HasBuff("VelkozR") && Hitch.IsCC(wtarget))
+            if (ComboMenu.GetCheckBoxValue("wUse") && W.IsReady() && wtarget.IsValidTarget(SpellsManager.W.Range)  && !Program.Champion.HasBuff("VelkozR") && wtarget.HasBuffOfType(BuffType.Knockback))
             {
                 W.Cast(wtarget);
             }

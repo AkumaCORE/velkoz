@@ -45,21 +45,21 @@ namespace RoninVelkoz.Modes
                 Combo.Execute();
             }
             
-            if (MiscMenu["MCastQ"].Cast<KeyBind>().CurrentValue)
-            {
-                var minion = EntityManager.MinionsAndMonsters.GetLaneMinions(EntityManager.UnitTeam.Enemy,
-                Player.Instance.ServerPosition, 1100).ToArray();
-                var lineFarmLocation = EntityManager.MinionsAndMonsters.GetLineFarmLocation(minion, 60,
-                1000, Game.CursorPos);
-                if (Core.GameTickCount - Program.QTime >= 1500 && lineFarmLocation.HitNumber == 0)
-                {
-                    SpellsManager.Q.Cast(Game.CursorPos);
-                }
-                else
-                {
-                    return;
-                }
-            }
+//            if (MiscMenu["MCastQ"].Cast<KeyBind>().CurrentValue)
+//            {
+//                var minion = EntityManager.MinionsAndMonsters.GetLaneMinions(EntityManager.UnitTeam.Enemy,
+  //              Player.Instance.ServerPosition, 1100).ToArray();
+  //              var lineFarmLocation = EntityManager.MinionsAndMonsters.GetLineFarmLocation(minion, 60,
+  //              1000, Game.CursorPos);
+ //               if (Core.GameTickCount - Program.QTime >= 1500 && lineFarmLocation.HitNumber == 0)
+   //             {
+   //                 SpellsManager.Q.Cast(Game.CursorPos);
+ //               }
+ //               else
+ //               {
+ //                   return;
+  //              }
+ //           }
 
             if (orbMode.HasFlag(Orbwalker.ActiveModes.Harass) && playerMana > HarassMenu.GetSliderValue("manaSlider"))
             {

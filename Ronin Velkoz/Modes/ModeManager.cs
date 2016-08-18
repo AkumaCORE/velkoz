@@ -44,6 +44,11 @@ namespace RoninVelkoz.Modes
             {
                 Combo.Execute();
             }
+            
+            if (MiscMenu.["MCastQ"].Cast<KeyBind>().CurrentValue)
+            {
+                Combo.Execute();
+            }
 
             if (orbMode.HasFlag(Orbwalker.ActiveModes.Harass) && playerMana > HarassMenu.GetSliderValue("manaSlider"))
             {

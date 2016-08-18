@@ -284,10 +284,9 @@ namespace RoninVelkoz
 	                    	{
 	
 				   
-	                           if (SpellsManager.Q.Cast(Champion);)
-	                           {
-	                         		Chat.Print("enemy");
-	                           }
+	                           SpellsManager.Q.Cast(Champion);
+				   SpellsManager.Q.Cast(Champion);
+				   SpellsManager.Q.Cast(Champion);
 	
 	                           
 	                        }

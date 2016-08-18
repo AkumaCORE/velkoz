@@ -49,6 +49,10 @@ namespace RoninVelkoz.Modes
             {
                 var minion = EntityManager.MinionsAndMonsters.GetLaneMinions(EntityManager.UnitTeam.Enemy,
                 Player.Instance.ServerPosition, 1100).ToArray();
+                if (Prediction.Position.Collision.LinearMissileCollision(minion, Player.Instance.ServerPosition,  Game.CursorPos, 1200, 70, 0))
+                {
+                    
+                }
             }
 
             if (orbMode.HasFlag(Orbwalker.ActiveModes.Harass) && playerMana > HarassMenu.GetSliderValue("manaSlider"))

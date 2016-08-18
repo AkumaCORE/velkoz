@@ -43,7 +43,7 @@ namespace RoninVelkoz.Modes
                 E.Cast(etarget.ServerPosition);
             }
 
-            if (wtarget != null && HarassMenu.GetCheckBoxValue("wUse") && W.IsReady() && wtarget.IsValidTarget(SpellsManager.W.Range) && wtarget.HasBuffOfType(BuffType.Knockback))
+            if (wtarget != null && HarassMenu.GetCheckBoxValue("wUse") && W.IsReady() && wtarget.IsValidTarget(SpellsManager.W.Range) && wtarget.HasBuffOfType(BuffType.KnockUp))
             {
                 W.Cast(wtarget.ServerPosition);
             }

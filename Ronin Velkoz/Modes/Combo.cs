@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -46,7 +46,7 @@ namespace RoninVelkoz.Modes
                 }
             }
 
-            if (ComboMenu.GetCheckBoxValue("eUse") && E.IsReady() && etarget.IsValidTarget(SpellsManager.E.Range))
+            if (ComboMenu.GetCheckBoxValue("eUse") && E.IsReady() && etarget.IsValidTarget(SpellsManager.E.Range) && E.GetPrediction(qtarget).HitChance >= HitChance.High && E.GetPrediction(etarget).HitChance >= Hitch.hitchance(E, ComboMenu))
             {
                 E.Cast(etarget);
             }

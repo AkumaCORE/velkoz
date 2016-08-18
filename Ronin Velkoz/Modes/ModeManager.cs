@@ -50,25 +50,25 @@ namespace RoninVelkoz.Modes
                 Harass.Execute();
             }
 
-            if (orbMode.HasFlag(Orbwalker.ActiveModes.LastHit) && playerMana > LasthitMenu.GetSliderValue("manaSlider"))
-            {
-                LastHit.Execute();
-            }
+     //       if (orbMode.HasFlag(Orbwalker.ActiveModes.LastHit) && playerMana > LasthitMenu.GetSliderValue("manaSlider"))
+    //        {
+    //            LastHit.Execute();
+    //        }
 
-            if (orbMode.HasFlag(Orbwalker.ActiveModes.LaneClear) && playerMana > LaneClearMenu.GetSliderValue("manaSlider"))
-            {
-                LaneClear.Execute();
-            }
+    //        if (orbMode.HasFlag(Orbwalker.ActiveModes.LaneClear) && playerMana > LaneClearMenu.GetSliderValue("manaSlider"))
+    //        {
+   //             LaneClear.Execute();
+    //        }
 
             if (orbMode.HasFlag(Orbwalker.ActiveModes.JungleClear) && playerMana > JungleClearMenu.GetSliderValue("manaSlider"))
             {
                 JungleClear.Execute();
             }
 
-            if (playerMana > AutoHarassMenu.GetSliderValue("manaSlider") && AutoHarassMenu.GetKeyBindValue("autoHarassKey"))
-            {
-                AutoHarass.Execute();
-            }
+  //          if (playerMana > AutoHarassMenu.GetSliderValue("manaSlider") && AutoHarassMenu.GetKeyBindValue("autoHarassKey"))
+//            {
+ //               AutoHarass.Execute();
+  //          }
         }
     }
 }

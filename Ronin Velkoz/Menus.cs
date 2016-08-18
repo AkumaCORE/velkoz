@@ -23,8 +23,8 @@ namespace RoninVelkoz
         public const string ComboMenuID = "combomenuid";
         public const string HarassMenuID = "harassmenuid";
        // public const string AutoHarassMenuID = "autoharassmenuid";
-        public const string LaneClearMenuID = "laneclearmenuid";
-        public const string LastHitMenuID = "lasthitmenuid";
+        //public const string LaneClearMenuID = "laneclearmenuid";
+        //public const string LastHitMenuID = "lasthitmenuid";
         public const string JungleClearMenuID = "jungleclearmenuid";
         public const string KillStealMenuID = "killstealmenuid";
         public const string DrawingsMenuID = "drawingsmenuid";
@@ -32,9 +32,9 @@ namespace RoninVelkoz
         public static Menu FirstMenu;
         public static Menu ComboMenu;
         public static Menu HarassMenu;
-        public static Menu AutoHarassMenu;
-        public static Menu LaneClearMenu;
-        public static Menu LasthitMenu;
+        //public static Menu AutoHarassMenu;
+        //public static Menu LaneClearMenu;
+        //public static Menu LasthitMenu;
         public static Menu JungleClearMenu;
         public static Menu KillStealMenu;
         public static Menu DrawingsMenu;
@@ -57,8 +57,8 @@ namespace RoninVelkoz
             ComboMenu = FirstMenu.AddSubMenu("• Combo", ComboMenuID);
             HarassMenu = FirstMenu.AddSubMenu("• Harass", HarassMenuID);
             //AutoHarassMenu = FirstMenu.AddSubMenu("• AutoHarass", AutoHarassMenuID);
-            LaneClearMenu = FirstMenu.AddSubMenu("• LaneClear", LaneClearMenuID);
-            LasthitMenu = FirstMenu.AddSubMenu("• LastHit", LastHitMenuID);
+            //LaneClearMenu = FirstMenu.AddSubMenu("• LaneClear", LaneClearMenuID);
+           // LasthitMenu = FirstMenu.AddSubMenu("• LastHit", LastHitMenuID);
             JungleClearMenu = FirstMenu.AddSubMenu("• JungleClear", JungleClearMenuID);
             KillStealMenu = FirstMenu.AddSubMenu("• KillSteal", KillStealMenuID);
             MiscMenu = FirstMenu.AddSubMenu("• Misc", MiscMenuID);
@@ -101,14 +101,14 @@ namespace RoninVelkoz
             //AutoHarassMenu.CreateSlider("Mana must be higher than [{0}%] to use AutoHarass spells", "manaSlider", 30);
             //AutoHarassMenu.AddLabel("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
 
-            LaneClearMenu.AddLabel("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
-            LaneClearMenu.AddGroupLabel("LaneClear");
-            LaneClearMenu.CreateCheckBox(" - Use Q", "qUse");
-            LaneClearMenu.CreateCheckBox(" - Use W", "wUse");
-            LaneClearMenu.CreateCheckBox(" - Use E", "eUse");
-            LaneClearMenu.AddGroupLabel("Settings");
-            LaneClearMenu.CreateSlider("Mana must be higher than [{0}%] to use LaneClear spells", "manaSlider", 30);
-            LaneClearMenu.AddLabel("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
+            //LaneClearMenu.AddLabel("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
+            //LaneClearMenu.AddGroupLabel("LaneClear");
+            //LaneClearMenu.CreateCheckBox(" - Use Q", "qUse");
+            //LaneClearMenu.CreateCheckBox(" - Use W", "wUse");
+            //LaneClearMenu.CreateCheckBox(" - Use E", "eUse");
+            //LaneClearMenu.AddGroupLabel("Settings");
+            //LaneClearMenu.CreateSlider("Mana must be higher than [{0}%] to use LaneClear spells", "manaSlider", 30);
+            //LaneClearMenu.AddLabel("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
 
             JungleClearMenu.AddLabel("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
             JungleClearMenu.AddGroupLabel("JungleClear");

@@ -32,9 +32,9 @@ namespace RoninVelkoz
         public static Menu FirstMenu;
         public static Menu ComboMenu;
         public static Menu HarassMenu;
-        //public static Menu AutoHarassMenu;
-        //public static Menu LaneClearMenu;
-        //public static Menu LasthitMenu;
+        public static Menu AutoHarassMenu;
+        public static Menu LaneClearMenu;
+        public static Menu LasthitMenu;
         public static Menu JungleClearMenu;
         public static Menu KillStealMenu;
         public static Menu DrawingsMenu;

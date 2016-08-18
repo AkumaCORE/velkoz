@@ -38,7 +38,7 @@ namespace RoninVelkoz.Modes
                 if (R.IsReady())
                 {
                     var rDamage = rtarget.GetDamage(SpellSlot.R);
-                    var target = TargetManager.GetChampionTarget(SpellsManager.R.Range, DamageType.Magical, false, false, SpellsManager.RDamage());
+                    var target = TargetManager.GetChampionTarget(SpellsManager.R.Range, DamageType.Magical, false, false, SpellsManager.RDamage() * 2);
                     if (target != null)
                         SpellsManager.R.Cast(target);
                         Program.UltFollowMode();

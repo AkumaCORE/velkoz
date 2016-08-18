@@ -66,8 +66,23 @@ namespace RoninVelkoz
             GameObject.OnCreate += Obj_AI_Base_OnCreate;
             //GameObject.OnCreate += SpellsManager.OnCreate;
             Drawing.OnDraw += OnDraw3;
+            Obj_AI_Base.OnBasicAttack += Obj_AI_Base_OnBasicAttack;
         }
         
+        private static void Obj_AI_Base_OnBasicAttack(Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
+        {
+            var CurrentTarget = TargetSelector.GetTarget(SpellsManager.E.Range, DamageType.Magical);
+            //(CurrentTarget.Hero != Champion.Yasuo && sender.Mana <= 90)//
+            if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.Harass) && sender == CurrentTarget && !sender.IsDashing() && sender.Type == GameObjectType.AIHeroClient && sender.IsValidTarget(SpellsManager.E.Range) && SpellsManager.E.IsReady() && sender.IsEnemy)
+            {
+
+                    SpellsManager.E.Cast(sender.ServerPosition);
+                    //Chat.Print("Basic Attack:"+args.SData.Name);
+                    
+
+
+            }
+	}
         private static void OnDraw3(EventArgs args)
         {
 

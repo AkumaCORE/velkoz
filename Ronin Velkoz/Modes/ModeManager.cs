@@ -49,7 +49,7 @@ namespace RoninVelkoz.Modes
             {
                 var minion = EntityManager.MinionsAndMonsters.GetLaneMinions(EntityManager.UnitTeam.Enemy,
                 Player.Instance.ServerPosition, 1100).ToArray();
-                var lineFarmLocation = EntityManager.MinionsAndMonsters.GetLineFarmLocation(minion, 70,
+                var lineFarmLocation = EntityManager.MinionsAndMonsters.GetLineFarmLocation(minion, 60,
                 1000, Game.CursorPos.Extend(Player.Instance.ServerPosition, 1000));
                 if (Core.GameTickCount - Program.QTime >= 1500 && lineFarmLocation.HitNumber == 0)
                 {

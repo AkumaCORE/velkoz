@@ -55,6 +55,10 @@ namespace RoninVelkoz.Modes
                 {
                     SpellsManager.Q.Cast(Game.CursorPos);
                 }
+                else
+                {
+                    return;
+                }
             }
 
             if (orbMode.HasFlag(Orbwalker.ActiveModes.Harass) && playerMana > HarassMenu.GetSliderValue("manaSlider"))

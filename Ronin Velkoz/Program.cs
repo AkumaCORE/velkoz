@@ -283,8 +283,11 @@ namespace RoninVelkoz
 		                if ( Prediction.Position.Collision.LinearMissileCollision(hero, startPos, endPos, 2000, 100, 0))
 	                    	{
 	
-				   Chat.Print("enemy");
-	                           SpellsManager.Q.Cast(Champion);
+				   
+	                           if (SpellsManager.Q.Cast(Champion);)
+	                           {
+	                         		Chat.Print("enemy");
+	                           }
 	
 	                           
 	                        }

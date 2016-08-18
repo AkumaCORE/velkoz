@@ -86,12 +86,12 @@ namespace RoninVelkoz
 	             }
 	             else 
 	             {return;}
-	           //  foreach (var perpendicular in Perpendiculars)
-	          //   {
-	          //      var endPos = Handle.Position.To2D() + 1000 * perpendicular;
-	           //     Circle.Draw(SharpDX.Color.Yellow, 10, 60, endPos.To3D());
+	             foreach (var perpendicular in Perpendiculars)
+	             {
+	                var endPos = Handle.Position.To2D() + 1000 * perpendicular;
+	                Circle.Draw(SharpDX.Color.Yellow, 10, 60, endPos.To3D());
 	                 
-        	   //  }
+        	     }
                
              
         }

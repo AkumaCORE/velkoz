@@ -38,6 +38,7 @@ namespace RoninVelkoz
         //}
         public static AIHeroClient Champion { get { return Player.Instance; } }
         private static List<Vector2> Perpendiculars { get; set; }
+        private static MissileClient QMissile;
         private static MissileClient Handle;
         public const float maxAngle = 96f;
         private static Vector3 intersection;
@@ -69,7 +70,10 @@ namespace RoninVelkoz
         
         private static void OnDraw3(EventArgs args)
         {
-
+             if (intersection != null)
+             {
+             	
+             }
              //var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
 	    // var enemydirection = CurrentTarget.ServerPosition;
 	  //   var startPos = Handle.Position.To2D();
@@ -80,12 +84,12 @@ namespace RoninVelkoz
 		  //   Circle.Draw(SharpDX.Color.White, 10, 50, intertwoD.To3D());
 	            // Circle.Draw(SharpDX.Color.Blue, 100, 100, enemydirection);
 	         //    Circle.Draw(SharpDX.Color.Red, 10, 50, startPos.To3D());
-	             foreach (var perpendicular in Perpendiculars)
-	             {
-	                var endPos = Handle.Position.To2D() + 1000 * perpendicular;
-	                Circle.Draw(SharpDX.Color.Yellow, 10, 60, endPos.To3D());
+	           //  foreach (var perpendicular in Perpendiculars)
+	          //   {
+	          //      var endPos = Handle.Position.To2D() + 1000 * perpendicular;
+	           //     Circle.Draw(SharpDX.Color.Yellow, 10, 60, endPos.To3D());
 	                 
-        	     }
+        	   //  }
                
              
         }
@@ -230,6 +234,7 @@ namespace RoninVelkoz
                 var missile = (MissileClient)sender;
                 if (missile.SData.Name != null && missile.SData.Name == "VelkozQMissile")
                     {
+                    QMissile = missile;
                     Handle = missile;
                     QTime = Core.GameTickCount;
                     }
@@ -245,7 +250,7 @@ namespace RoninVelkoz
 
             {
            //     Chat.Print("Q detected");
-                var Direction = (Handle.EndPosition.To2D() - Handle.StartPosition.To2D()).Normalized();
+                Direction = (Handle.EndPosition.To2D() - Handle.StartPosition.To2D()).Normalized();
                 Perpendiculars.Add(Direction.Perpendicular());
                 Perpendiculars.Add(Direction.Perpendicular2());
 

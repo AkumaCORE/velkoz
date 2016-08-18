@@ -46,12 +46,12 @@ namespace RoninVelkoz.Modes
                 }
             }
 
-            if (etarget != null && ComboMenu.GetCheckBoxValue("eUse") && E.IsReady() && etarget.IsValidTarget(SpellsManager.E.Range) && (etarget.HasBuffOfType(BuffType.Slow) || Hitch.IsCC(etarget)))
+            if (etarget != null && ComboMenu.GetCheckBoxValue("eUse") && E.IsReady() && etarget.IsValidTarget(SpellsManager.E.Range))
             {
                 E.Cast(etarget);
             }
 
-            if (wtarget != null && ComboMenu.GetCheckBoxValue("wUse") && W.IsReady() && wtarget.IsValidTarget(SpellsManager.W.Range)  && !Program.Champion.HasBuff("VelkozR") && wtarget.HasBuffOfType(BuffType.Knockback))
+            if (wtarget != null && ComboMenu.GetCheckBoxValue("wUse") && W.IsReady() && wtarget.IsValidTarget(SpellsManager.W.Range)  && !Program.Champion.HasBuff("VelkozR"))
             {
                 W.Cast(wtarget);
             }

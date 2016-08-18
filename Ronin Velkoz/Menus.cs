@@ -27,7 +27,7 @@ namespace RoninVelkoz
         public const string LastHitMenuID = "lasthitmenuid";
         public const string JungleClearMenuID = "jungleclearmenuid";
         public const string KillStealMenuID = "killstealmenuid";
-       // public const string DrawingsMenuID = "drawingsmenuid";
+        public const string DrawingsMenuID = "drawingsmenuid";
         public const string MiscMenuID = "miscmenuid";
         public static Menu FirstMenu;
         public static Menu ComboMenu;
@@ -37,7 +37,7 @@ namespace RoninVelkoz
         public static Menu LasthitMenu;
         public static Menu JungleClearMenu;
         public static Menu KillStealMenu;
-        //public static Menu DrawingsMenu;
+        public static Menu DrawingsMenu;
         public static Menu MiscMenu;
 
         //These colorslider are from Mario`s Lib
@@ -169,11 +169,11 @@ namespace RoninVelkoz
             //DrawingsMenu.CreateCheckBox(" - Draw E.", "eDraw");
           //  DrawingsMenu.CreateCheckBox(" - Draw R.", "rDraw");
            // DrawingsMenu.AddGroupLabel("Drawings Color");
-          //  QColorSlide = new ColorSlide(DrawingsMenu, "qColor", Color.Red, "Q Color:");
-           // WColorSlide = new ColorSlide(DrawingsMenu, "wColor", Color.Purple, "W Color:");
-          //  EColorSlide = new ColorSlide(DrawingsMenu, "eColor", Color.Orange, "E Color:");
-           // RColorSlide = new ColorSlide(DrawingsMenu, "rColor", Color.DeepPink, "R Color:");
-          //  DamageIndicatorColorSlide = new ColorSlide(DrawingsMenu, "healthColor", Color.YellowGreen, "DamageIndicator Color:");
+            QColorSlide = new ColorSlide(DrawingsMenu, "qColor", Color.Red, "Q Color:");
+            WColorSlide = new ColorSlide(DrawingsMenu, "wColor", Color.Purple, "W Color:");
+            EColorSlide = new ColorSlide(DrawingsMenu, "eColor", Color.Orange, "E Color:");
+            RColorSlide = new ColorSlide(DrawingsMenu, "rColor", Color.DeepPink, "R Color:");
+            DamageIndicatorColorSlide = new ColorSlide(DrawingsMenu, "healthColor", Color.YellowGreen, "DamageIndicator Color:");
         }
         public static int HitchanceQ
         {

@@ -45,7 +45,7 @@ namespace RoninVelkoz.Modes
                 Combo.Execute();
             }
             
-            if (MiscMenu.["MCastQ"].Cast<KeyBind>().CurrentValue)
+            if (MiscMenu["MCastQ"].Cast<KeyBind>().CurrentValue)
             {
                 Combo.Execute();
             }

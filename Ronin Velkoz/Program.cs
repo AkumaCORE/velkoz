@@ -77,7 +77,7 @@ namespace RoninVelkoz
             {
 
                     SpellsManager.E.Cast(sender.ServerPosition);
-                    //Chat.Print("Basic Attack:"+args.SData.Name);
+                    SpellsManager.W.Cast(sender.ServerPosition);
                     
 
 

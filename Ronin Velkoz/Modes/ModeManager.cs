@@ -49,8 +49,12 @@ namespace RoninVelkoz.Modes
             {
                 var minion = EntityManager.MinionsAndMonsters.GetLaneMinions(EntityManager.UnitTeam.Enemy,
                 Player.Instance.ServerPosition, 1100).ToArray();
-                var lineFarmLocationReturn = EntityManager.MinionsAndMonsters.GetLineFarmLocation(minion, 70,
+                var lineFarmLocation = EntityManager.MinionsAndMonsters.GetLineFarmLocation(minion, 70,
                 1000, Game.CursorPos.Extend(Player.Instance.ServerPosition, 1000));
+                if (Core.GameTickCount - Program.QTime >= 1500 && lineFarmLocation.HitNumber == 0)
+                {
+                    SpellsManager.Q.Cast(Game.CursorPos);
+                }
             }
 
             if (orbMode.HasFlag(Orbwalker.ActiveModes.Harass) && playerMana > HarassMenu.GetSliderValue("manaSlider"))

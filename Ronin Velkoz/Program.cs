@@ -111,65 +111,7 @@ namespace RoninVelkoz
              
         }
         
-        private static void OnTick(EventArgs args)
-        {
-        	var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
-        	if (CurrentTarget != null)
-                {
-                	const float step = maxAngle / 12f;
-                	var currentAngle = 0f;
-			var currentStep = 0f;
-			var cos = Math.Cos(currentAngle);
-			var intcos = (int)cos;
-			
-			var enemydirection = (CurrentTarget.Position.To2D()).Normalized();
-                        var skillshotline = ( Champion.ServerPosition.To2D() + enemydirection.Rotated(currentAngle) * 1100 * intcos);
-			while(true)	
-			{
-                            // Validate the counter, break if no valid spot was found in previous loops
-                                if (currentStep > maxAngle && currentAngle < 0)
-                                {
-                                    break;
-                                }
 
-                                // Check next angle
-                                if ((currentAngle == 0 || currentAngle < 0) && currentStep != 0)
-                                {
-                                    currentAngle = (currentStep) * (float) Math.PI / 180;
-                                    currentStep += step;
-                                }
-                                else if (currentAngle > 0)
-                                {
-                                    currentAngle = -currentAngle;
-                                }
-                                var collisionObjects = EntityManager.MinionsAndMonsters.GetLaneMinions(EntityManager.UnitTeam.Both,
-				Champion.Position,1500, false);
-                                foreach (var minion in collisionObjects)
-                                if(!Prediction.Position.Collision.LinearMissileCollision(minion, Champion.Position.To2D(), intersection.To2D(), 1300, 100, 250) && !Prediction.Position.Collision.LinearMissileCollision(minion, intersection.To2D(), CurrentTarget.Position.To2D() , 1300, 100, 250))
-	                        { 
-	                                if (currentStep == 0)
-	                                {
-	                                      currentStep = step;
-	                                      intersection = CurrentTarget.ServerPosition;
-					}
-					else
-	                                {
-				            intersection = skillshotline.To3D();
-				            break;
-					}
-	                        }
-			}        
-	
-				
-      
-                                
-
-                }        
-
-
-
-
-        }
 
         public static void UltFollowMode()
         {
